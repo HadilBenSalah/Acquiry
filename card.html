@@ -63,6 +63,7 @@
     .card-scene {
       width: min(340px, 88vw);
       height: min(220px, 57vw);
+      -webkit-perspective: 1000px;
       perspective: 1000px;
       margin-bottom: 44px;
       cursor: pointer;
@@ -85,6 +86,7 @@
       position: absolute; inset: 0;
       backface-visibility: hidden;
       -webkit-backface-visibility: hidden;
+      transform: translateZ(0);
       border-radius: 2px;
       overflow: hidden;
       background: var(--navy);
@@ -95,7 +97,7 @@
     }
 
     .card-back-face {
-      transform: rotateY(180deg);
+      transform: rotateY(180deg) translateZ(1px);
     }
 
     /* Grain on card */
